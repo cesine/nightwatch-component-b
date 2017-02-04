@@ -1,0 +1,19 @@
+{
+  "name": "nightwatch-component-b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch -c test/nightwatch.json",
+    "test:saucelabs": "nightwatch -c test/nightwatch.json --env saucelabs",
+    "selenium:download": "curl http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar > selenium-server-standalone.jar"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nightwatch": "^0.9.12"
+  },
+  "dependencies": {
+    "config": "^1.25.1"
+  }
+}
