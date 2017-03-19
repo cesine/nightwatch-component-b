@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch -c test/nightwatch.json || echo 'If you havent downloaded the jar yet, try \n$ npm run selenium:download'",
-    "test:saucelabs": "nightwatch -c test/nightwatch.json --env saucelabs",
+    "test:saucelabs": "nightwatch -c test/nightwatch.json --env saucelabs || echo 'trial ended?'",
     "selenium:download": "ls  || curl http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar > selenium-server-standalone.jar && ls chromedriver.zip || curl https://chromedriver.storage.googleapis.com/2.28/chromedriver_mac64.zip > chromedriver.zip; unzip chromedriver.zip"
   },
   "author": "",
