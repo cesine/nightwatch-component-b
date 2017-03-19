@@ -1,43 +1,49 @@
 {
-  "src_folders" : ["./test"],
-  "test_workers" : false,
-  "output_folder"  : "reports",
+  "src_folders": ["./test"],
+  "test_workers": false,
+  "output_folder": "reports",
 
-  "selenium" : {
-    "start_process" : true,
+  "selenium": {
+    "start_process": true,
     "server_path": "./selenium-server-standalone.jar",
-    "log_path" : "",
-    "host" : "127.0.0.1",
-    "port" : 4444
+    "log_path": "",
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": "chromedriver"
+    }
   },
 
-  "test_settings" : {
-    "default" : {
-      "filter" : "**/*.js"
+  "test_settings": {
+    "default": {
+      "filter": "**/*.js",
+      "desiredCapabilities": {
+        "browserName": "chrome"
+      }
     },
 
-    "saucelabs" : {
-      "selenium_host" : "ondemand.saucelabs.com",
-      "selenium_port" : 80,
-      "username" : "${SAUCE_USERNAME}",
-      "access_key" : "${SAUCE_ACCESS_KEY}",
-      "use_ssl" : false,
-      "silent" : true,
-      "output" : true,
-      "screenshots" : {
-        "enabled" : false,
-        "on_failure" : true,
-        "path" : "screenshots"
+    "saucelabs": {
+      "selenium_host": "ondemand.saucelabs.com",
+      "selenium_port": 80,
+      "username": "${SAUCE_USERNAME}",
+      "access_key": "${SAUCE_ACCESS_KEY}",
+      "use_ssl": false,
+      "silent": true,
+      "output": true,
+      "screenshots": {
+        "enabled": false,
+        "on_failure": true,
+        "path": "screenshots"
       },
       "desiredCapabilities": {
-        "name" : "test-example",
+        "name": "test-example",
         "browserName": "firefox"
       },
-      "globals" : {
-        "myGlobal" : "some_sauce_global"
+      "globals": {
+        "myGlobal": "some_sauce_global"
       },
-      "selenium" : {
-        "start_process" : false
+      "selenium": {
+        "start_process": false
       }
     }
   }

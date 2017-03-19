@@ -5,3 +5,6 @@ tests_output
 reports
 screenshots
 npm-debug.log
+chromedriver.zip
+chromedriver
+.DS_Store
